@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <title>Title</title>
+   <style>
+      body {
+         background-color: #BF9B4B;
+      }
+      .current::after {
+         content: "";
+         position: absolute;
+         display: block;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(255, 100, 10, .4);
+      }
+   </style>
+   <script src="create.js"></script>
+   <script src="change.js"></script>
+   <script>
+      window.onload = function () {
+         createEle(300);
+         var box = document.getElementById("box");
+         var lis = box.getElementsByTagName("li");
+         var center = document.getElementById("center");
+         var sport = new Sport(lis, center);
+         sport.init();
+      };
+   </script>
+</head>
+<body>
+
+</body>
+</html>
